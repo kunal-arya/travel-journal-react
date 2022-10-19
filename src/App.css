@@ -1,0 +1,90 @@
+.nav {
+    background-color: #F55A5A;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    color: #fff;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+
+/* ==============
+    cards
+   ============== */
+
+.card {
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    grid-template-areas: 
+        "img location"
+        "img title"
+        "img date"
+        "img para";
+    column-gap: 1em;
+}
+
+.card--location,
+.card--date,
+.card--para {
+    font-size: 0.625rem;
+}
+
+.card--title,
+.card--date,
+.card--para {
+    color: #2B283A;
+}
+
+.card--title,
+.card--date {
+    font-weight: 700;
+}
+
+.card--img {
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.card--location {
+    display: flex;
+    grid-area: location;
+    align-items: center;
+    gap: 0.5em;
+    margin: 1.5em 0 4px;
+}
+
+.card--location > * {
+    margin:0;
+}
+
+.card--location > a {
+    color: #918E9B;
+}
+
+.card--location > p {
+    letter-spacing: 0.17em;
+}
+
+.card--title {
+    grid-area: title;
+    font-size: 1.5rem;
+    margin: 0 0 0.25em;
+}
+
+.card--date {
+    grid-area: date;
+}
+
+.card--para {
+    grid-area: para;
+    margin:0 0 1.5em;
+    line-height: 1.6;
+}
